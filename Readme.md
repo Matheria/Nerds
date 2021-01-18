@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Сергей Савинков](https://up.htmlacademy.ru/htmlcss/30/user/451829).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Маклай](https://htmlacademy.ru/profile/mikhailmaclay).
 
 ---
 
