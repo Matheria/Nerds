@@ -7,7 +7,7 @@
   <body>
     <header>
       <nav>
-        <a>
+        <a title="Главная страница">
           <img src="https://via.placeholder.com/150x100" alt="Логотип студии Нёрдс">
         </a>
         <ul>
@@ -15,8 +15,6 @@
           <li><a href="#">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul>
           <li><a href="#">Корзина</a></li>
         </ul>
       </nav>
@@ -24,9 +22,8 @@
 
     <main>
       <h1>Дизайн-студия Нёрдс</h1>
-
       <section>
-        <h2>Преимущества</h2>
+        <h2>Слайдер</h2>
         <ul>
           <li>
             <p>Долго, дорого,<br>скрупулезно</p>
@@ -86,7 +83,7 @@
       <section>
         <h2>Наши результаты</h2>
         <img src="https://via.placeholder.com/150x100" alt="Логотип дизайн-студии Нёрдс">
-        <p>С 2004 года любим точность во всём:</p>
+        <p><b>С 2004 года любим точность во всём:</b></p>
         <ul>
           <li>
             <p>146%</p>
@@ -165,18 +162,18 @@
     <section>
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="POST">
-        <label for="full-name">Ваше имя:
-          <input type="text" id="full-name" name="fullname" placeholder="Имя Фамилия">
+        <label>Ваше имя:
+          <input type="text" name="fullname" placeholder="Имя Фамилия">
         </label>
-        <label for="e-mail">Ваш email:
-          <input type="text" id="e-mail" name="email" placeholder="email@example.com">
+        <label>Ваш email:
+          <input type="email" name="email" placeholder="email@example.com">
         </label>
-        <label for="form-message">Текст письма:
-          <input type="text" id="form-message" name="message" placeholder="В свободной форме">
+        <label>Текст письма:
+          <textarea name="message" placeholder="В свободной форме"></textarea>
         </label>
-        <button type="submit">Отправить</button>
+        <button>Отправить</button>
       </form>
-      <button type="button"><span>Закрыть</span></button>
+      <button aria-label="Закрыть окно" type="button"><span>X</span></button>
     </section>
   </body>
 </html>
