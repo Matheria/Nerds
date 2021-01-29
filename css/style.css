@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto.woff2) format("woff2"),
+        url(../fonts/roboto.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/robotomedium.woff2) format("woff2"),
+        url(../fonts/robotomedium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/robotobold.woff2) format("woff2"),
+        url(../fonts/robotobold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-gray: #EEEEEE;
+  --basic-white: #FFFFFF;
+  --black: #282136;
+  --gray-light: #A6A6A6;
+  --gray-lighter: #E1E1E1;
+  --red-light: #FB565A;
+  --red: #E74246;
+  --red-dark: #D7373B;
+  --green-light: #00CA74;
+  --green: #00BC6C;
+  --green-dark: #00AA62;
+  --yellow-light: #EFC849;
+  --yellow: #EAB534;
+  --yellow-dark: #E5A722;
+  --gray-dark: #444444;
+  --gray-dark4D: #4D4D4D;
+  --gray-dark66: #666666;
+  --gray-lightD7: #D7DCDE;
+  --gray-lightB4: #B4B9BB;
+  --gray-lightDF: #DFDFDF;
+  --gray-lightD5: #D5D5D5;
+  --gray-lightDB: #DBDBDB;
+
+}
+
+/* Global */
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+/* Header*/
+
+.main-header {
+  background-color: var(--basic-gray);
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.site-navigation,
+.cart {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart a {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--basic-black);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-navigation a:hover,
+.cart a:hover {
+  color: var(--red-light);
+}
+
+.site-navigation a:active,
+.cart a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Slider */
+
+.slider {
+  background-color: var(--basic-gray);
+}
+
+.slider-list {
+  list-style: none;
+}
+
+.slider-slogan {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.button {
+  width: 240px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--red-light);
+  padding: 17px 54px 15px;
+  border-radius: 3px;
+}
+
+a.button {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* TODO: Состояние кнопок при наведении и нажатии */
+
+/* Advantages */
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantage-item-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.button-fill-red {
+  width: 160px;
+  height: 50px;
+}
+
+.button-fill-green {
+  width: 160px;
+  height: 50px;
+  background-color: var(--green-light);
+}
+
+.button-fill-yellow {
+  width: 160px;
+  height: 50px;
+  background-color: var(--yellow-light);
+}
+
+/* About us */
+
+.about-us-title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.about-us-desc {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-list {
+  list-style: none;
+}
+
+.results-list {
+  list-style: none;
+}
+
+.result-item {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.result-item-percent {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.result-item-desc {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+
+/* Partners */
+
+.partners-list {
+  list-style: none;
+}
+
+/* TODO: Состояние кнопок при наведении и нажатии */
+
+/* Footer */
+
+.footer-modal-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.footer-modal-desc {
+  line-height: 18px;
+  color: var(--gray-dark66);
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-button {
+  width: 81px;
+  height: 81px;
+  border-radius: 100%;
+  background-color: var(--gray-lighter);
+}
+
+.footer-slogan {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.footer-slogan-desc {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--gray-dark);
+}
