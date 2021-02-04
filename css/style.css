@@ -113,7 +113,7 @@ body {
 }
 
 .site-navigation-link:active {
-  color: rgba(var(--basic-black), 0.3);
+  color: var(--black-30);
 }
 
 /* Slider */
@@ -146,6 +146,7 @@ body {
   color: var(--basic-white);
   font-weight: 500;
   background-color: var(--red-light);
+  border: none;
   border-radius: 3px;
   text-decoration: none;
   transition: background-color 100ms, color 100ms;
@@ -491,31 +492,28 @@ body {
   text-decoration: none;
 }
 
-.template-title {
+.template-background {
+  background-color: var(--basic-gray);
+}
+
+.template-desc {
+  line-height: 18px;
+  color: var(--gray-dark66);
+}
+
+.templates-list-link {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
 }
-
-.templates-list-link {
-  color: var(--basic-black);
-}
 .templates-list-link:hover {
-  color: var(--basic-black);
+  color: var(--red-light);
 }
-
-
-
-
-
-
-
-
-
-
-
+.templates-list-link:focus {
+  color: var(--black-30);
+}
 
 .button-templates {
   width: 200px;
