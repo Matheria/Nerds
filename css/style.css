@@ -300,7 +300,7 @@ body {
   height: 81px;
   border-radius: 100%;
   background-color: var(--gray-lighter);
-  transition: background-color 100ms, color 100ms;
+  transition: background-color 100ms;
 }
   .button-round:hover {
     background-color: var(--red);
@@ -309,11 +309,15 @@ body {
     background-color: var(--red-dark);
     box-shadow: inset 0px 3px 0px var(--swamp-10);
   }
-  .button-round:active .social-img {
+  .button-round:active .button-icon {
     background-color: var(--red-dark);
     opacity: 0.3;
     box-shadow: inset 0px 3px 0px var(--swamp-10);
   }
+
+.button-icon {
+  transition: opacity 100ms;
+}
 
 .footer-tagline-title {
   font-size: 36px;
