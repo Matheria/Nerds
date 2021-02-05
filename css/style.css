@@ -550,6 +550,29 @@ body {
 
 
 
+.display-none {
+  display: none;
+}
+
+/* Grid */
+
+.services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+
+.index-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
 
 
 
