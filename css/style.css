@@ -150,6 +150,7 @@ body {
   border-radius: 3px;
   text-decoration: none;
   transition: background-color 100ms, color 100ms;
+  box-sizing: border-box;
 }
   .button:hover {
     background-color: var(--red);
@@ -159,6 +160,10 @@ body {
     background-color: var(--red-dark);
     box-shadow: inset 0px 3px 0px var(--swamp-10);
   }
+
+.button:not(:disabled) {
+  cursor: pointer
+}
 
 .button-slider {
   width: 240px;
@@ -295,6 +300,7 @@ body {
   height: 81px;
   border-radius: 100%;
   background-color: var(--gray-lighter);
+  transition: background-color 100ms, color 100ms;
 }
   .button-round:hover {
     background-color: var(--red);
@@ -488,7 +494,7 @@ body {
   list-style: none;
 }
 
-.templates-list-link {
+.template-link {
   text-decoration: none;
 }
 
@@ -501,21 +507,21 @@ body {
   color: var(--gray-dark66);
 }
 
-.templates-list-link {
+.template-link {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-black);
   text-transform: uppercase;
 }
-.templates-list-link:hover {
+.template-link:hover {
   color: var(--red-light);
 }
-.templates-list-link:focus {
+.template-link:focus {
   color: var(--black-30);
 }
 
-.button-templates {
+.button-template {
   width: 200px;
 }
 
@@ -529,12 +535,10 @@ body {
 
 .button-pagination {
   width: 50px;
-  box-sizing: border-box;
 }
 
 .button-pagination-next {
   width: 260px;
-  box-sizing: border-box;
 }
 
 .button-pagination-active {
