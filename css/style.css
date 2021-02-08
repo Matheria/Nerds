@@ -198,6 +198,7 @@
 
 .services {
   padding-top: 80px;
+  margin-bottom: 80px;
 }
 
 .services-list {
@@ -350,6 +351,7 @@
 
 .contacts {
   position: relative;
+  margin-bottom: 75px;
 }
 
 .contacts-map {
@@ -370,10 +372,16 @@
   width: 319px;
   height: 308px;
 
+  margin: 0;
+  padding-top: 49px;
+  padding-left: 50px;
+
   background-color: var(--basic-white);
 }
 
 .contacts-popup-title {
+  display: block;
+  margin-bottom: 23px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -381,9 +389,15 @@
   text-transform: uppercase;
 }
 
-.contacts-popup-desc {
+.contacts-popup-desc,
+.contacts-popup-tel {
+  margin-top: 0;
   line-height: 18px;
   color: var(--gray-dark66);
+}
+
+.contacts-popup-tel {
+  margin-bottom: 37px;
 }
 
 .button-popup {
@@ -431,6 +445,9 @@
 }
 
 .footer-tagline-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -438,11 +455,14 @@
 }
 
 .footer-tagline-desc {
+  margin: 0;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: var(--gray-dark);
 }
+
 
 /* Modal */
 
