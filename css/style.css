@@ -141,9 +141,12 @@
 
 .slider {
   background-color: var(--basic-gray);
+  margin-bottom: 80px;
 }
 
 .slider-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -152,6 +155,7 @@
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
+  margin: 0 0 25px;
 }
 
 .button {
@@ -192,13 +196,17 @@
 
 /* Services */
 
+.services {
+  padding-top: 80px;
+}
+
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 100px;
-  margin-bottom: 80px;
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 
 .service-item-title {
@@ -207,6 +215,12 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.service-item-desc {
+  margin-bottom: 32px;
 }
 
 .button-services {
@@ -237,28 +251,51 @@
 
 .index-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 660px 360px;
+  gap: 140px;
   margin-bottom: 75px;
 }
 
 .about-title {
+  display: block;
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
   color: var(--basic-black);
+  margin-bottom: 32px;
+}
+
+.about-paragraph {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .about-desc {
+  display: block;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 23px;
 }
 
 .about-list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
+.about-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .results-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.results-img {
+  margin-bottom: 37px;
 }
 
 .result-item {
@@ -283,11 +320,19 @@
 
 /* Partners */
 
+.partners {
+  padding-bottom: 80px;
+}
+
 .partners-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
-  margin-bottom: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.partners-list {
   list-style: none;
 }
 
