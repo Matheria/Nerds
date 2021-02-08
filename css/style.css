@@ -348,6 +348,31 @@
 
 /* Footer */
 
+.contacts {
+  position: relative;
+}
+
+.contacts-map {
+
+}
+
+.contacts-map-marker {
+  position: absolute;
+  top: 86px;
+  right: 387px;
+}
+
+.contacts-popup {
+  position: absolute;
+  top: 54px;
+  left: 140px;
+
+  width: 319px;
+  height: 308px;
+
+  background-color: var(--basic-white);
+}
+
 .contacts-popup-title {
   font-size: 18px;
   line-height: 30px;
