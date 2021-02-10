@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body class="page-body">
+  <body class="page-body inner-page">
 
     <header class="page-header">
-      <nav class="page-navigation">
+      <nav class="page-navigation container">
         <a href="index.html" class="page-header-logo" title="Главная страница">
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нёрдс">
         </a>
@@ -31,12 +31,10 @@
           <li class="site-navigation-item">
             <a class="site-navigation-link" href="#">Контакты</a>
           </li>
-          <li class="site-navigation-item">
-            <a class="site-navigation-link" href="#">
-              <img src="img/cart.svg" width="15" height="15" alt="Значок корзины">Корзина
-            </a>
-          </li>
         </ul>
+        <div class="page-navigation-cart">
+          <a class="site-navigation-link" href="#">Корзина</a>
+        </div>
       </nav>
     </header>
 
@@ -46,27 +44,34 @@
         <h1 class="catalog-header-title">Магазин готовых шаблонов</h1>
       </div>
 
+      <div class="container catalog-grid">
+
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="form-filters" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="filter-item">
             <legend class="form-filters-title">Стоимость:</legend>
-            <div>
-              <input type="range" min="0" max="15000">
-              <!--TODO: Диапазон цен-->
-            </div>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
 
-            <div class="price">
-              <label class="price-label">От:
-                <input type="number" name="min-price" value="0">
-              </label>
-              <label class="price-label">До:
-                <input type="number" name="max-price" value="15000">
-              </label>
+              <div class="price-controls">
+                <label class="price-label min-price">От:
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <label class="price-label max-price">До:
+                  <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
             </div>
           </fieldset>
 
-          <fieldset class="radio-controls">
+          <fieldset class="filter-item radio-controls">
             <legend class="form-filters-title">Сетка:</legend>
             <ul class="form-list">
               <li class="form-list-item">
@@ -87,7 +92,7 @@
            </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter-item">
             <legend class="form-filters-title">Особенности:</legend>
             <ul class="form-list">
               <li class="form-list-item">
@@ -268,6 +273,9 @@
           </ul>
         </div>
       </section>
+
+    </div>
+
     </main>
 
     <footer class="page-footer">
@@ -278,11 +286,12 @@
         <div class="contacts-popup">
           <b class="contacts-popup-title">nёrds design studio</b>
           <p class="contacts-popup-desc">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p class="contacts-popup-desc">тел. +7 (812) 275-75-75</p>
+          <p class="contacts-popup-tel">тел. +7 (812) 275-75-75</p>
           <a class="button button-popup" href="#">Напишите нам</a>
         </div>
       </section>
 
+        <div class="footer-grid container">
           <ul class="social-list">
             <li class="social-list-item">
               <a class="button-round" href="#" title="Группа ВКонтакте">
@@ -296,7 +305,7 @@
             </li>
             <li class="social-list-item">
               <a class="button-round" href="#" title="Инстаграм">
-                  <img class="button-icon" src="img/insta-icon.svg" width="21" height="21" alt="Логотип Инстаграм">
+                  <img class=" button-icon" src="img/insta-icon.svg" width="21" height="21" alt="Логотип Инстаграм">
               </a>
             </li>
           </ul>
@@ -304,9 +313,10 @@
             <p class="footer-tagline-title">Давайте дружить, это выгодно!</p>
             <p class="footer-tagline-desc">Скидка 10% для друзей из социальных сетей.</p>
           </div>
+        </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal display-none">
       <h2 class="modal-title">Напишите нам</h2>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="POST">
         <label class="modal-form-label">Ваше имя:
