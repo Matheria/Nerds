@@ -188,6 +188,10 @@
 
 }
 
+.slider-inner {
+  position: relative;
+}
+
 .slider-list {
   margin: 0;
   padding: 0;
@@ -222,12 +226,13 @@
 
 .slider-controls {
   position: absolute;
-  top: 431px;
-  left: 676px;
-  z-index: 20;
   display: flex;
-  width: 88px;
   justify-content: space-between;
+  width: 88px;
+  bottom: 96px;
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
 }
 
 .button-switch {
@@ -431,6 +436,7 @@
 .results-title {
   /* TODO: Подумать как обойтись без text-align: center */
   text-align: center;
+
 }
 
 .result-item {
@@ -532,7 +538,7 @@
   background-color: var(--basic-gray);
 }
 
-.contacts-container {
+.contacts-inner {
   width: 1160px;
   position: relative;
   margin: 0 auto;
@@ -540,6 +546,7 @@
 
 .contacts-map {
   display: block;
+  margin: 0 auto;
 }
 
 .contacts-map-marker {
