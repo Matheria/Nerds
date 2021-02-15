@@ -185,7 +185,10 @@
   height: 431px;
   background-color: var(--basic-gray);
   margin-bottom: 80px;
+}
 
+.slider-inner {
+  position: relative;
 }
 
 .slider-list {
@@ -222,9 +225,10 @@
 
 .slider-controls {
   position: absolute;
-  top: 431px;
-  left: 676px;
+  bottom: 96px;
+  left: 50%;
   z-index: 20;
+  transform: translateX(-50%);
   display: flex;
   width: 88px;
   justify-content: space-between;
@@ -532,14 +536,14 @@
   background-color: var(--basic-gray);
 }
 
-.contacts-container {
-  width: 1160px;
+.contacts-inner {
   position: relative;
-  margin: 0 auto;
 }
 
 .contacts-map {
   display: block;
+
+  margin: 0 auto;
 }
 
 .contacts-map-marker {
