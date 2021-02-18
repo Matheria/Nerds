@@ -384,10 +384,13 @@
 }
 
 .about-paragraph {
- --title-and-paragraph-error: 8px;
+ /* --title-and-paragraph-error: 8px;
 
   margin-top: 0;
-  margin-bottom: calc(40px + var(--title-and-paragraph-error));
+  margin-bottom: calc(40px + var(--title-and-paragraph-error)); */
+
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .about-desc {
@@ -433,12 +436,15 @@
 }
 
 .results-img {
+  display: block;
   margin-bottom: 37px;
 }
 
 .results-title {
   /* TODO: Подумать как обойтись без text-align: center */
   text-align: center;
+  margin: 0;
+  margin-bottom: 31px;
 
 }
 
