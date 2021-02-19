@@ -75,6 +75,8 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+  overflow-x:hidden;
 }
 
 .visually-hidden {
@@ -107,13 +109,14 @@
 .page-header {
   height: 114px;
 
+  display: flex;
+
   background-color: var(--basic-gray);
 }
 
 .page-header-logo {
   width: 160px;
   height: 65px;
-  margin-top: 49px;
   margin-right: 202px;
 }
 
@@ -203,9 +206,7 @@
   line-height: 55px;
   font-weight: 500;
   color: var(--basic-black);
-  margin: 0;
-  padding-top: 78px;
-  padding-bottom: 25px;
+  margin: 0 0 25px 0;
 }
 
 .slider-desc {
@@ -217,6 +218,7 @@
 .slider-item {
   position: relative;
   height: 431px;
+  padding-top: 78px;
 }
 
 .slider-img {
@@ -232,7 +234,7 @@
   display: flex;
   justify-content: space-between;
   width: 88px;
-  bottom: 96px;
+  bottom: 174px;
   left: 50%;
   z-index: 20;
   transform: translateX(-50%);
@@ -254,7 +256,7 @@
   position: absolute;
   width: 8px;
   height: 8px;
-  bottom:5px;
+  bottom: 5px;
   right: 5px;
   border: 2px solid var(--silver);
   border-radius: 50%;
@@ -316,6 +318,7 @@
 
 .service-item-img {
   display: block;
+  margin-bottom: 25px;
 }
 
 .service-item-title {
@@ -325,11 +328,11 @@
   text-transform: uppercase;
   color: var(--basic-black);
   padding: 0;
-  margin: 25px 0 16px 0;
+  margin: 0 0 16px 0;
 }
 
 .service-item-desc {
-  margin-bottom: 32px;
+  margin: 0 0 32px 0;
 }
 
 .button-services {
@@ -570,7 +573,10 @@
   height: 308px;
 
   margin: 0;
-  padding: 49px 50px 47px 50px;
+  padding-top: 49px;
+  padding-right: 39px;
+  padding-left: 50px;
+  padding-bottom: 47px;
 
   box-sizing: border-box;
   background-color: var(--basic-white);
@@ -591,6 +597,10 @@
   margin-top: 0;
   line-height: 18px;
   color: var(--gray-dark66);
+}
+
+.contacts-popup-desc {
+  margin-bottom: 20px;
 }
 
 .contacts-popup-tel {
@@ -615,7 +625,7 @@
 .social-list {
   display: flex;
   width: 261px;
-  margin: 0 139px 68px 0;
+  margin: 0 139px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -674,10 +684,54 @@
 
 /* Modal */
 
+.modal  {
+  position: fixed;
+  width: 960px;
+  height: 590px;
+
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+
+  margin: auto;
+  padding: 50px 100px;
+  z-index: 25;
+
+  box-sizing: border-box;
+
+  background-color: var(--basic-white);
+  box-shadow: 0 20px 40px var(--black-40);
+}
+
+.modal-close {
+  display: block;
+  position: absolute;
+  top: 78px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background-image: url(../img/close-cross.svg);
+  background-color: var(--basic-white);
+  background-position: 0 0;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 761px;
+  height: 353px;
+  column-gap: 40px;
+}
+
 .modal-title {
   font-size: 45px;
   line-height: 53px;
   font-weight: 700;
+  margin-bottom: 37px;
   color: var(--basic-black);
 }
 
@@ -685,6 +739,7 @@
   line-height: 18px;
   font-weight: 700;
   color: var(--basic-black);
+  margin-bottom: 9px;
 }
 
 .input,
@@ -728,7 +783,16 @@
     color: var(--red);
   }
 
-  .button-modal {
+.input-field {
+    width: 360px;
+  }
+
+.textarea-field {
+    width: 760px;
+  }
+
+
+.button-modal {
     width: 259px;
   }
 
@@ -982,43 +1046,6 @@
 .display-none {
   display: none;
 }
-
-/* Modal */
-
-.modal  {
-  position: fixed;
-  width: 960px;
-  height: 590px;
-
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-
-  margin: auto;
-  padding: 50px 100px;
-  z-index: 25;
-
-  background-color: var(--basic-white);
-  box-shadow: 0 20px 40px var(--black-40);
-}
-
-
-.modal-title {
-  font-size: 45px;
-  line-height: 53px;
-  font-weight: 700;
-
-  margin-bottom: 37px;
-}
-
-.modal-form-label {
-  line-height: 18px;
-  font-weight: 700;
-
-  margin-bottom: 9px;
-}
-
 
 
 
