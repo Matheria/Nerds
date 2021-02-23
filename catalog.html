@@ -32,12 +32,12 @@
         <li class="site-navigation-item">
           <a class="site-navigation-link" href="#">Контакты</a>
         </li>
+        <li class="site-navigation-item">
+          <a class="site-navigation-link" href="#">
+            <img class="site-navigation-link-icon" src="img/cart.svg" width="15" height="15" alt="Значок корзины">Корзина
+          </a>
+        </li>
       </ul>
-      <div class="page-navigation-cart">
-        <a class="site-navigation-link" href="#">
-          <img src="img/cart.svg" width="15" height="15" alt="Значок корзины">Корзина
-        </a>
-      </div>
     </nav>
   </header>
 
@@ -76,57 +76,44 @@
 
           <fieldset class="filter-item radio-controls">
             <legend class="form-filters-title">Сетка:</legend>
-            <ul class="form-list">
-              <li class="form-list-item">
-                <label class="form-list-label">
-                  <input type="radio" name="grid" value="adaptive" checked>Адаптивная
-                </label>
+            <ul class="radio-list">
+              <li class="radio-list-item">
+                <input class="radio-input visually-hidden" type="radio" id="adaptive" name="grid" value="adaptive" checked>
+                <label class="radio-label" for="adaptive">Адаптивная</label>
               </li>
-              <li class="form-list-item">
-                <label class="form-list-label">
-                  <input type="radio" name="grid" value="fixed">Фиксированная
-                </label>
+              <li class="radio-list-item">
+                  <input class="radio-input visually-hidden" type="radio" id="fixed" name="grid" value="fixed">
+                  <label class="radio-label" for="fixed">Фиксированная</label>
               </li>
-              <li class="form-list-item">
-                <label class="form-list-label">
-                  <input type="radio" name="grid" value="flex">Резиновая
-                </label>
+              <li class="radio-list-item">
+                  <input class="radio-input visually-hidden" type="radio" id="flex" name="grid" value="flex" disabled>
+                  <label class="radio-label" for="flex">Резиновая</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="filter-item">
+          <fieldset class="filter-item checkbox-controls">
             <legend class="form-filters-title">Особенности:</legend>
-            <ul class="form-list">
-              <li class="form-list-item">
-                <div>
-                  <input type="checkbox" name="slider" id="filter-slider" checked>
-                  <label class="form-list-label" for="filter-slider">Слайдер</label>
-                </div>
+            <ul class="checkbox-list">
+              <li class="checkbox-list-item">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+                  <label class="checkbox-label" for="filter-slider">Слайдер</label>
               </li>
-              <li class="form-list-item">
-                <div>
-                  <input type="checkbox" name="advantages" id="filter-advantages">
-                  <label class="form-list-label" for="filter-advantages">Блок преимуществ</label>
-                </div>
+              <li class="checkbox-list-item">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="advantages" id="filter-advantages">
+                  <label class="checkbox-label" for="filter-advantages">Блок преимуществ</label>
               </li>
-              <li class="form-list-item">
-                <div>
-                  <input type="checkbox" name="news" id="filter-news" checked>
-                  <label class="form-list-label" for="filter-news">Новости</label>
-                </div>
+              <li class="checkbox-list-item">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="news" id="filter-news" checked>
+                  <label class="checkbox-label" for="filter-news">Новости</label>
               </li>
-              <li class="form-list-item">
-                <div>
-                  <input type="checkbox" name="gallery" id="filter-gallery">
-                  <label class="form-list-label" for="filter-gallery">Галерея</label>
-                </div>
+              <li class="checkbox-list-item">
+                  <input class="checkbox-input  visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+                  <label class="checkbox-label" for="filter-gallery">Галерея</label>
               </li>
-              <li class="form-list-item">
-                <div>
-                  <input type="checkbox" name="cart" id="filter-cart">
-                  <label class="form-list-label" for="filter-cart">Корзина</label>
-                </div>
+              <li class="checkbox-list-item">
+                  <input class="checkbox-input  visually-hidden" type="checkbox" name="cart" id="filter-cart" disabled>
+                  <label class="checkbox-label" for="filter-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
@@ -140,7 +127,7 @@
           <p class="form-filters-title">Сортировать:</p>
           <ul class="sort-list">
             <li class="sort-list-item">
-              <a class="sort-list-link" href="?sort=price">По цене</a>
+              <a class="sort-list-link sort-list-link-current" href="?sort=price">По цене</a>
             </li>
             <li class="sort-list-item">
               <a class="sort-list-link" href="?order=desc">По типу</a>
@@ -149,15 +136,15 @@
               <a class="sort-list-link" href="?order=asc">По названию</a>
             </li>
           </ul>
-          <ul class="sort-list">
+          <ul class="sort-list-direction">
             <li class="sort-list-item">
               <a class="sort-list-link" href="?order=down">
-                <span>По убыванию</span>
+                <img class="sort-list-icon" src="/img/sort-icon.svg" width="11" height="10">
               </a>
             </li>
             <li class="sort-list-item">
               <a class="sort-list-link" href="?order=up">
-                <span>По возрастанию</span>
+                <img class="sort-list-icon sort-list-icon-up" src="/img/sort-icon.svg" width="11" height="10">
               </a>
             </li>
           </ul>
@@ -284,39 +271,42 @@
   <footer class="page-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
-      <img class="contacts-map" src="img/map.png" width="1440" height="416" alt="Карта проезда">
-      <img class="contacts-map-marker" src="img/map-marker.png" width="231" height="190" alt="Метка на карте">
-      <div class="contacts-popup">
-        <b class="contacts-popup-title">nёrds design studio</b>
-        <p class="contacts-popup-desc">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <p class="contacts-popup-tel">тел. +7 (812) 275-75-75</p>
-        <a class="button button-popup" href="#">Напишите нам</a>
+      <img class="contacts-map" src="img/map.png" width="1440" height="416"  alt="Карта проезда">
+      <div class="contacts-inner container">
+        <img class="contacts-map-marker" src="img/map-marker.png" width="231" height="190" alt="Метка на карте">
+        <div class="contacts-popup">
+          <b class="contacts-popup-title">nёrds design studio</b>
+          <p class="contacts-popup-desc">191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8</p>
+          <p class="contacts-popup-tel">тел. +7 (812) 275-75-75</p>
+          <a class="button button-popup" href="#">Напишите нам</a>
+        </div>
       </div>
     </section>
 
-    <div class="footer-grid container">
-      <ul class="social-list">
-        <li class="social-list-item">
-          <a class="button-round" href="#" title="Группа ВКонтакте">
-            <img class="button-icon" src="img/vk-icon.svg" width="26" height="15" alt="Логотип Вконтакте">
-          </a>
-        </li>
-        <li class="social-list-item">
-          <a class="button-round" href="#" title="Группа Фейсбук">
-            <img class="button-icon" src="img/fb-icon.svg" width="12" height="22" alt="Логотип Фейсбук">
-          </a>
-        </li>
-        <li class="social-list-item">
-          <a class="button-round" href="#" title="Инстаграм">
-            <img class=" button-icon" src="img/insta-icon.svg" width="21" height="21" alt="Логотип Инстаграм">
-          </a>
-        </li>
-      </ul>
-      <div class="footer-tagline">
-        <p class="footer-tagline-title">Давайте дружить, это выгодно!</p>
-        <p class="footer-tagline-desc">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="footer-wrap container">
+        <ul class="social-list">
+          <li class="social-list-item">
+            <a class="button-round" href="#" title="Группа ВКонтакте">
+                <img class="button-icon" src="img/vk-icon.svg" width="26" height="15" alt="Логотип Вконтакте">
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="button-round" href="#" title="Группа Фейсбук">
+                <img class="button-icon" src="img/fb-icon.svg" width="12" height="22" alt="Логотип Фейсбук">
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="button-round" href="#" title="Инстаграм">
+                <img class=" button-icon" src="img/insta-icon.svg" width="21" height="21" alt="Логотип Инстаграм">
+            </a>
+          </li>
+        </ul>
+        <div class="footer-tagline">
+          <p class="footer-tagline-title">Давайте дружить, это выгодно!</p>
+          <p class="footer-tagline-desc">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
-    </div>
   </footer>
 
   <div class="modal display-none">
@@ -329,7 +319,7 @@
         <input class="input" type="email" name="email" placeholder="email@example.com">
       </label>
       <label class="modal-form-label">Текст письма:
-        <textarea class="textarea" name="message" placeholder="В свободной форме"></textarea>
+        <textarea class="textarea textarea-field" name="message" placeholder="В свободной форме"></textarea>
       </label>
       <button class="button button-modal">Отправить</button>
     </form>

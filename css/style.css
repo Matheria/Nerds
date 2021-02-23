@@ -179,7 +179,15 @@
 }
 
 .site-navigation-link-current {
+  position: relative;
+}
+
+.site-navigation-link-current::after {
+  content: "";
+  position: absolute;
+  width: 73px;
   border-bottom: 2px solid var(--red-light);
+  top: 42px;
 }
 
 /* Slider */
@@ -615,10 +623,9 @@
   display: flex;
   align-items: center;
 
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 68px;
+  padding-bottom: 68px;
 }
-
 
 /* Social */
 
@@ -719,12 +726,11 @@
 }
 
 .modal-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  width: 761px;
-  height: 353px;
+  display: grid;
+  grid-template-columns: 360px 360px;
   column-gap: 40px;
+  row-gap: 34px;
+  margin-bottom: 48px;
 }
 
 .modal-title {
@@ -736,6 +742,9 @@
 }
 
 .modal-form-label {
+  display: flex;
+  flex-direction: column;
+
   line-height: 18px;
   font-weight: 700;
   color: var(--basic-black);
@@ -749,8 +758,10 @@
   border-radius: 3px;
   box-sizing: border-box;
   height: 50px;
+  margin-top: 9px;
   padding: 16px;
-  resize: none;
+  resize: vertical;
+
 }
   .input:hover,
   .textarea:hover {
@@ -783,14 +794,9 @@
     color: var(--red);
   }
 
-.input-field {
-    width: 360px;
-  }
-
 .textarea-field {
     width: 760px;
   }
-
 
 .button-modal {
     width: 259px;
@@ -831,6 +837,8 @@
    font-weight: 700;
    color: var(--basic-black);
    text-transform: uppercase;
+   margin: 0;
+   padding: 0;
 }
 
 .filter-item {
@@ -839,9 +847,13 @@
   border: none;
 }
 
+.filter-item .form-filters-title {
+  margin-bottom: 48px;
+}
+
 .range-filter {
   width: 260px;
-  margin-top: 48px;
+  margin-bottom: 54px;
 }
 
 .range-controls {
@@ -888,7 +900,8 @@
   left: 160px;
 }
 
-.form-list {
+.radio-list,
+.checkbox-list {
    margin: 0;
    padding: 0;
    list-style: none;
@@ -914,12 +927,113 @@
    text-transform: uppercase;
 }
 
-.form-list-label {
+.radio-label {
+  position: relative;
   line-height: 19px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-list-item,
+.checkbox-list-item {
+  margin-bottom: 20px;
+  padding-left: 36px;
+}
+
+.radio-controls {
+  margin-bottom: 45px;
+}
+
+.radio-controls .form-filters-title {
+  margin-bottom: 13px;
+}
+
+.radio-input + .radio-label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -36px;
+  width: 25px;
+  height: 25px;
+  background-image: url(/img/radio-off.svg);
+  opacity: 0.4;
+}
+
+.radio-input:checked + .radio-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -28px;
+  width: 9px;
+  height: 9px;
+  background-image: url(/img/radio-check.svg);
+  opacity: 0.4;
+}
+
+.radio-input:hover + .radio-label::before,
+.radio-input:checked:hover + .radio-label::after {
+  opacity: 1;
+}
+
+.radio-input:disabled + .radio-label::before {
+  opacity: 0.3;
+}
+
+.radio-input:disabled + .radio-label {
+  opacity: 0.3;
+}
+
+.checkbox-controls .form-filters-title {
+  margin-bottom: 14px;
+}
+
+.checkbox-label {
+  position: relative;
+  line-height: 19px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input + .checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -36px;
+  width: 23px;
+  height: 23px;
+  background-image: url(/img/checkbox-off.svg);
+  opacity: 0.4;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -36px;
+  width: 25px;
+  height: 23px;
+  background-image: url(/img/checkbox-on.svg);
+  opacity: 0.4;
+}
+
+.checkbox-input:hover + .checkbox-label::before,
+.checkbox-input:checked:hover + .checkbox-label::after {
+  opacity: 1;
+}
+
+.checkbox-input:disabled + .checkbox-label {
+  opacity: 0.3;
+}
+
+.checkbox-input:disabled + .checkbox-label::before {
+  opacity: 0.3;
 }
 
 .button-filters {
   width: 260px;
+  margin-top: 48px;
 }
 
 .button-gray {
@@ -933,30 +1047,63 @@
     background-color: var(--gray-lightD5);
  }
 
-
-
 /* Sort */
 
- .sort-list {
-   margin: 0;
-   padding: 0;
-   list-style: none;
- }
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
 
- .sort-list-link {
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--black-30);
-  text-decoration: none;
-  text-transform: uppercase;
- }
-  .sort-list-link:hover {
-    color: var(--black-60);
-  }
-  .sort-list-link:active,
-  .sort-list-link:focus{
-    color: var(--basic-black);
-  }
+.sort .form-filters-title {
+  width: 360px;
+}
+
+.sort-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 272px;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.sort-list-link {
+font-size: 14px;
+line-height: 18px;
+color: var(--black-30);
+text-decoration: none;
+text-transform: uppercase;
+}
+.sort-list-link:hover {
+  color: var(--black-60);
+}
+.sort-list-link:active,
+.sort-list-link:focus{
+  color: var(--basic-black);
+}
+
+.sort-list-link-current {
+  color: var(--basic-black);
+}
+
+.sort-list-direction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-list-icon-up {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
 
 /* Templates */
 
@@ -965,15 +1112,42 @@
   padding: 0;
   list-style: none;
 
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: 42px;
-  row-gap: 31px;
+  row-gap: 30px;
 }
 
 .templates-list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 358px;
-  min-height: 618px;
+  height: 618px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.templates-list-item::before {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 40px;
+  background-image: url(/img/template-header.svg);
+  opacity: 0.12;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.templates-list-item:hover::before {
+  opacity: 1;
+}
+
+.template-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+  margin-bottom: 12px;
 }
 
 .template-image {
@@ -986,12 +1160,31 @@
 }
 
 .template-background {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  min-height: 231px;
+  text-align: center;
   background-color: var(--basic-gray);
+  left: 0;
+  bottom: 0;
+}
+
+.template-background {
+  display: none;
+}
+
+.templates-list-item:hover .template-background {
+  display: block;
 }
 
 .template-desc {
   line-height: 18px;
   color: var(--gray-dark66);
+  margin-bottom: 32px;
 }
 
 .template-link {
