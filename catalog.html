@@ -44,7 +44,9 @@
   <main class="page-main">
 
     <div class="catalog-header">
-      <h1 class="catalog-header-title">Магазин готовых шаблонов</h1>
+      <div class="container">
+        <h1 class="catalog-header-title">Магазин готовых шаблонов</h1>
+      </div>
     </div>
 
     <div class="container catalog-grid">
@@ -52,8 +54,8 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="form-filters" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter-item">
-            <legend class="form-filters-title">Стоимость:</legend>
+          <fieldset class="fieldset-price">
+            <legend class="form-filters-title fieldset-price-title">Стоимость:</legend>
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
@@ -74,46 +76,86 @@
             </div>
           </fieldset>
 
-          <fieldset class="filter-item radio-controls">
-            <legend class="form-filters-title">Сетка:</legend>
-            <ul class="radio-list">
-              <li class="radio-list-item">
-                <input class="radio-input visually-hidden" type="radio" id="adaptive" name="grid" value="adaptive" checked>
-                <label class="radio-label" for="adaptive">Адаптивная</label>
+          <fieldset class="fieldset fieldset-radio">
+            <legend class="form-filters-title fieldset-title">Сетка:</legend>
+            <ul class="fieldset-field-list">
+              <li class="fieldset-field-item">
+                <div class="input-radio">
+                  <input class="input-radio-control visually-hidden" type="radio" id="adaptive" name="grid" value="adaptive" checked>
+                  <label class="input-radio-label-wrapper" for="adaptive">
+                    <span class="input-radio-button input-radio-button-checked"></span>
+                    <span class="input-radio-label">Адаптивная</span>
+                  </label>
+                </div>
               </li>
-              <li class="radio-list-item">
-                  <input class="radio-input visually-hidden" type="radio" id="fixed" name="grid" value="fixed">
-                  <label class="radio-label" for="fixed">Фиксированная</label>
+              <li class="fieldset-field-item">
+                <div class="input-radio">
+                  <input class="input-radio-control visually-hidden" type="radio" id="fixed" name="grid" value="fixed">
+                  <label class="input-radio-label-wrapper" for="fixed">
+                    <span class="input-radio-button input-radio-button-checked"></span>
+                    <span class="input-radio-label">Фиксированная</span>
+                  </label>
+                </div>
               </li>
-              <li class="radio-list-item">
-                  <input class="radio-input visually-hidden" type="radio" id="flex" name="grid" value="flex" disabled>
-                  <label class="radio-label" for="flex">Резиновая</label>
+              <li class="fieldset-field-item">
+                <div class="input-radio">
+                  <input class="input-radio-control visually-hidden" type="radio" id="flex" name="grid" value="flex" >
+                  <label class="input-radio-label-wrapper" for="flex">
+                    <span class="input-radio-button input-radio-button-checked"></span>
+                    <span class="input-radio-label">Резиновая</span>
+                  </label>
+                </div>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="filter-item checkbox-controls">
-            <legend class="form-filters-title">Особенности:</legend>
-            <ul class="checkbox-list">
-              <li class="checkbox-list-item">
-                  <input class="checkbox-input visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
-                  <label class="checkbox-label" for="filter-slider">Слайдер</label>
+          <fieldset class="fieldset">
+            <legend class="form-filters-title fieldset-title">Особенности:</legend>
+            <ul class="fieldset-field-list">
+              <li class="fieldset-field-item">
+                <div class="input-checkbox">
+                  <input class="input-checkbox-control visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
+                  <label class="input-checkbox-label-wrapper" for="filter-slider">
+                    <span class="input-checkbox-button input-checkbox-button-checked"></span>
+                    <span class="input-checkbox-label">Слайдер</span>
+                  </label>
+                </div>
               </li>
-              <li class="checkbox-list-item">
-                  <input class="checkbox-input visually-hidden" type="checkbox" name="advantages" id="filter-advantages">
-                  <label class="checkbox-label" for="filter-advantages">Блок преимуществ</label>
+              <li class="fieldset-field-item">
+                <div class="input-checkbox">
+                  <input class="input-checkbox-control visually-hidden" type="checkbox" name="advantages" id="filter-advantages">
+                  <label class="input-checkbox-label-wrapper" for="filter-advantages">
+                    <span class="input-checkbox-button input-checkbox-button-checked"></span>
+                    <span class="input-checkbox-label">Блок преимуществ</span>
+                  </label>
+                </div>
               </li>
-              <li class="checkbox-list-item">
-                  <input class="checkbox-input visually-hidden" type="checkbox" name="news" id="filter-news" checked>
-                  <label class="checkbox-label" for="filter-news">Новости</label>
+              <li class="fieldset-field-item">
+                <div class="input-checkbox">
+                  <input class="input-checkbox-control visually-hidden" type="checkbox" name="news" id="filter-news">
+                  <label class="input-checkbox-label-wrapper" for="filter-news">
+                    <span class="input-checkbox-button input-checkbox-button-checked"></span>
+                    <span class="input-checkbox-label">Новости</span>
+                  </label>
+                </div>
               </li>
-              <li class="checkbox-list-item">
-                  <input class="checkbox-input  visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
-                  <label class="checkbox-label" for="filter-gallery">Галерея</label>
+              <li class="fieldset-field-item">
+                <div class="input-checkbox">
+                  <input class="input-checkbox-control visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
+                  <label class="input-checkbox-label-wrapper" for="filter-gallery">
+                    <span class="input-checkbox-button input-checkbox-button-checked"></span>
+                    <span class="input-checkbox-label">Галерея</span>
+                  </label>
+                </div>
               </li>
-              <li class="checkbox-list-item">
-                  <input class="checkbox-input  visually-hidden" type="checkbox" name="cart" id="filter-cart" disabled>
-                  <label class="checkbox-label" for="filter-cart">Корзина</label>
+              <li class="fieldset-field-item">
+                <div class="input-checkbox">
+                  <input class="input-checkbox-control visually-hidden" type="checkbox" name="cart" id="filter-cart">
+                  <label class="input-checkbox-label-wrapper" for="filter-cart">
+                    <span class="input-checkbox-button input-checkbox-button-checked"></span>
+                    <span class="input-checkbox-label">Корзина</span>
+                  </label>
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -271,7 +313,7 @@
   <footer class="page-footer">
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
-      <img class="contacts-map" src="img/map.png" width="1440" height="416"  alt="Карта проезда">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614198072407!5m2!1sru!2sru" width="100%" height="416" style="border:0;" allowfullscreen="false" loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       <div class="contacts-inner container">
         <img class="contacts-map-marker" src="img/map-marker.png" width="231" height="190" alt="Метка на карте">
         <div class="contacts-popup">
@@ -313,7 +355,7 @@
     <h2 class="modal-title">Напишите нам</h2>
     <form class="modal-form" action="https://echo.htmlacademy.ru" method="POST">
       <label class="modal-form-label">Ваше имя:
-        <input class="input" type="text" name="fullname" placeholder="Имя Фамилия">
+        <input class="input" type="text" name="fullname" placeholder="Имя Фамилия" autofocus>
       </label>
       <label class="modal-form-label">Ваш email:
         <input class="input" type="email" name="email" placeholder="email@example.com">
@@ -325,6 +367,7 @@
     </form>
     <button class="modal-close" aria-label="Закрыть окно" type="button"><span>X</span></button>
   </div>
+  <script src="js/modal.js" type="module"></script>
 </body>
 
 </html>
