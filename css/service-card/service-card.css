@@ -1,0 +1,22 @@
+.service-card__img {
+  display: block;
+
+  margin-bottom: 25px;
+}
+
+.service-card__title {
+  margin: 0 0 16px 0;
+  padding: 0;
+
+  text-transform: uppercase;
+
+  color: var(--basic-black);
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.service-card__button {
+  margin-top: 32px;
+}

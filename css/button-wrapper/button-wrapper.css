@@ -1,0 +1,35 @@
+.button-wrapper {
+  display: inline-flex;
+
+  padding: 0;
+
+  vertical-align: top;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.button-wrapper:not(:disabled),
+.button-wrapper[href] {
+  cursor: pointer;
+}
+
+.button-wrapper:focus-visible {
+  box-shadow: 0 0 0 4px var(--color-cornflower-blue-50);
+}
+
+.button-wrapper > * {
+  pointer-events: none;
+}
+
+/* Context Modifiers */
+
+.button_modal-close-button:hover,
+.button_modal-close-button:focus-visible {
+  opacity: 1;
+}
+
+.button_modal-close-button:active {
+  opacity: 0.1;
+}

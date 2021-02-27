@@ -1,0 +1,61 @@
+.visually-hidden {
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+
+  white-space: nowrap;
+}
+
+.container {
+  width: 1160px;
+
+  margin: 0 auto;
+}
+
+.cms-content ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.cms-content li {
+  position: relative;
+  padding-left: 32px;
+}
+
+.cms-content li::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  height: 2px;
+  width: 25px;
+
+  content: "";
+  transform: translateY(-50%);
+
+  background-color: var(--red-light);
+}
+
+.cms-content h4 {
+  text-transform: uppercase;
+}
+
+.cms-content .margin-bottom-40px {
+  margin-bottom: 40px;
+}
+
+.flip-vertical {
+  transform: rotate(180deg);
+}

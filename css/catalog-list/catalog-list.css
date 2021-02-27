@@ -1,0 +1,11 @@
+.catalog-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+    row-gap: 30px;
+
+    margin: 0 0 55px 0;
+    padding: 0;
+
+    list-style: none;
+}

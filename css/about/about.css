@@ -1,0 +1,11 @@
+.about__title {
+  display: block;
+
+  margin: 0 0 32px;
+
+  color: var(--basic-black);
+
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}

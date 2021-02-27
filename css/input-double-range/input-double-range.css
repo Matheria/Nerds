@@ -1,0 +1,101 @@
+.input-double-range__slider {
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+    margin-bottom: 14px;
+    padding: 0 22px;
+
+    border-radius: 3px;
+    background-color: var(--basic-gray);
+
+}
+
+.input-double-range__track {
+    position: relative;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--gray-lightD7F);
+    background-image: linear-gradient(to right, transparent 30%, var(--green-light) 30%, var(--green-light) 100%, transparent 100%);
+}
+
+.input-double-range__button {
+    --size: 20px;
+
+    position: absolute;
+    top: 50%;
+
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: background-color var(--time-microinteraction);
+
+    outline: none;
+    border: 8px solid var(--basic-white);
+    background-color: var(--gray-darkAB);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px var(--black-15);
+}
+
+.input-double-range__button:hover,
+.input-double-range__button:focus-visible {
+    background-color: var(--gray-dark4D);
+}
+
+.input-double-range__button:focus-visible {
+    box-shadow: 0 0 0 4px var(--color-cornflower-blue-50);
+}
+
+.input-double-range__button_min {
+    left: 30%;
+}
+
+.input-double-range__button_max {
+    left: 100%;
+}
+
+.input-double-range__control {
+    box-sizing: border-box;
+    width: 80px;
+    height: 38px;
+    margin-left: 8px;
+
+    outline: none;
+
+    text-align: center;
+
+    border: none;
+    border-radius: 3px;
+    background-color: var(--basic-gray);
+}
+
+.input-double-range__control:focus-visible {
+  box-shadow: 0 0 0 4px var(--color-cornflower-blue-50);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-double-range__controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-double-range__label {
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+
+
+.radio-controls .form-filters-title {
+    margin-bottom: 13px;
+}

@@ -1,0 +1,155 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 20px;
+
+  vertical-align: baseline;
+  transition: background-color var(--time-microinteraction), color var(--time-microinteraction);
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+
+  outline: none;
+  color: var(--basic-white);
+  border: none;
+  border-radius: 3px;
+  background-color: var(--red-light);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--red);
+}
+
+.button:active {
+  color: var(--white-30);
+  background-color: var(--red-dark);
+  box-shadow: inset 0px 3px 0px var(--swamp-10);
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 4px var(--color-cornflower-blue-50);
+}
+
+button.button:not(:disabled) {
+  cursor: pointer;
+}
+
+a.button:not([href]) {
+  cursor: auto;
+}
+
+/* Colors */
+
+.button_gray {
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+}
+
+.button_gray:hover,
+.button_gray:focus-visible {
+  background-color: var(--gray-lightDF);
+}
+
+.button_gray:active {
+  color: var(--black-30);
+  background-color: var(--basic-gray);
+}
+
+.button_green {
+  background-color: var(--green-light);
+}
+
+.button_green:hover,
+.button_green:focus-visible {
+  background-color: var(--green);
+}
+
+.button_green:active {
+  background-color: var(--green-dark);
+}
+
+.button_yellow {
+  background-color: var(--yellow-light);
+}
+
+.button_yellow:hover,
+.button_yellow:focus-visible {
+  background-color: var(--yellow);
+}
+
+.button_yellow:active {
+  background-color: var(--yellow-dark);
+}
+
+/* Themes */
+
+.button_outlined {
+  transition: border-color var(--time-microinteraction);
+
+  border: 3px solid var(--gray-lightDB);
+}
+
+.button_outlined,
+.button_outlined:hover,
+.button_outlined:active {
+  background-color: transparent;
+}
+
+.button_outlined,
+.button_outlined:active {
+  box-shadow: none;
+}
+
+.button_outlined.button_gray {
+  border-color: var(--basic-gray);
+}
+
+.button_outlined.button_gray:hover,
+.button_outlined.button_gray:focus-visible {
+  border-color: var(--gray-lightDF);
+}
+
+.button_outlined.button_gray:active {
+  border-color: var(--basic-gray);
+}
+
+/* Context Modifiers */
+
+.button_service-card {
+  width: 160px;
+}
+
+.button_slider {
+  width: 240px;
+}
+
+.button_template {
+  width: 200px;
+}
+
+.button_pagination-next {
+  width: 260px;
+}
+
+.button_filters {
+  width: 260px;
+  margin-top: 48px; /* TODO: Плохая история */
+}
+
+.button_write-us-modal-button {
+  width: 259px;
+}
+
+.button_pagination {
+  width: 50px;
+}

@@ -1,0 +1,44 @@
+.popup {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 319px;
+    height: 308px;
+    padding: 50px;
+
+    background-color: var(--basic-white);
+  }
+
+  .popup__title {
+    display: block;
+
+    margin-bottom: 23px;
+
+    text-transform: uppercase;
+
+    color: var(--black);
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .popup__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+  }
+
+  .popup__text {
+    margin: 0;
+
+    color: var(--gray-dark66);
+
+    line-height: 18px;
+  }
+
+  .popup__button {
+    margin-top: auto;
+  }
