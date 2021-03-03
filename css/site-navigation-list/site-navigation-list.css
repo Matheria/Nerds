@@ -25,7 +25,7 @@
     text-transform: uppercase;
 
     outline: none;
-    color: var(--basic-black);
+    color: var(--color-black);
 
     font-size: 16px;
     line-height: 30px;
@@ -34,11 +34,11 @@
 
 .site-navigation-list__link:hover,
 .site-navigation-list__link:focus-visible {
-    color: var(--red-light);
+    color: var(--color-carnation);
 }
 
 .site-navigation-list__link:active {
-    color: var(--black-30);
+    color: var(--color-black-30);
 }
 
 .site-navigation-list__link:focus-visible {
@@ -52,11 +52,11 @@
 
 .site-navigation-list__link_current::after {
     position: absolute;
-    bottom: -9px;
+    bottom: -13px;
 
     width: 100%;
 
     content: "";
 
-    border-bottom: 2px solid var(--red-light);
+    border-bottom: 2px solid var(--color-carnation);
 }

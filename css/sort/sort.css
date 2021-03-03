@@ -12,7 +12,7 @@
 
     text-transform: uppercase;
 
-    color: var(--basic-black);
+    color: var(--color-black);
 
     font-size: 18px;
     line-height: 30px;
@@ -59,7 +59,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    color: var(--black-30);
+    color: var(--color-black-30);
 
     font-size: 14px;
     line-height: 18px;
@@ -67,12 +67,12 @@
 
 .sort__link:hover,
 .sort__link:focus-visible {
-    color: var(--black-60);
+    color: var(--color-black-60);
 }
 
 .sort__link:active,
 .sort__link_current {
-    color: var(--basic-black);
+    color: var(--color-black);
 }
 
 .sort__link:focus-visible {

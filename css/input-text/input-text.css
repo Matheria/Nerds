@@ -5,18 +5,18 @@
 
     resize: none;
 
-    border: 2px solid var(--gray-lightD7);
+    border: 2px solid var(--color-iron-light);
     border-radius: 3px;
 
     line-height: 18px;
 }
 
 .input-text:hover {
-    border-color: var(--gray-lightB4);
+    border-color: var(--color-silver-sand);
 }
 
 .input-text:focus {
-    border-color: var(--basic-black);
+    border-color: var(--color-black);
 }
 
 .input-text:focus-visible {
@@ -24,24 +24,24 @@
 }
 
 .input-text::placeholder {
-    color: var(--gray-50);
+    color: var(--color-tundora-50);
 }
 
 .input-text:focus::placeholder {
-    color: var(--gray-dark);
+    color: var(--color-tundora);
 }
 
 .textarea::placeholder {
-    color: var(--gray-50);
+    color: var(--color-tundora-50);
 }
 
 .textarea:focus::placeholder {
-    color: var(--gray-dark);
+    color: var(--color-tundora);
 }
 
 .input-text:invalid {
-    color: var(--red);
-    border-color: var(--red);
+    color: var(--color-cinnabar);
+    border-color: var(--color-cinnabar);
 }
 
 /* Context Modifiers */

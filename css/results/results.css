@@ -28,7 +28,7 @@
 }
 
 .result__item {
-  color: var(--basic-black);
+  color: var(--color-black);
 
   font-size: 45px;
   line-height: 64px;
@@ -44,7 +44,7 @@
 .result__item-desc {
   margin: 10px 0 0;
 
-  color: var(--black);
+  color: var(--color-steel-gray);
 
   font-size: 16px;
   line-height: 18px;

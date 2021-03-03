@@ -15,10 +15,10 @@
   cursor: pointer;
 
   outline: none;
-  color: var(--basic-white);
+  color: var(--color-white);
   border: none;
   border-radius: 3px;
-  background-color: var(--red-light);
+  background-color: var(--color-carnation);
 
   font-weight: 500;
   font-size: 16px;
@@ -27,13 +27,13 @@
 
 .button:hover,
 .button:focus-visible {
-  background-color: var(--red);
+  background-color: var(--color-cinnabar);
 }
 
 .button:active {
-  color: var(--white-30);
-  background-color: var(--red-dark);
-  box-shadow: inset 0px 3px 0px var(--swamp-10);
+  color: var(--color-white-30);
+  background-color: var(--color-valencia);
+  box-shadow: inset 0px 3px 0px var(--color-swamp-10);
 }
 
 .button:focus-visible {
@@ -51,44 +51,44 @@ a.button:not([href]) {
 /* Colors */
 
 .button_gray {
-  color: var(--basic-black);
-  background-color: var(--basic-gray);
+  color: var(--color-black);
+  background-color: var(--color-gray);
 }
 
 .button_gray:hover,
 .button_gray:focus-visible {
-  background-color: var(--gray-lightDF);
+  background-color: var(--color-alto-dark);
 }
 
 .button_gray:active {
-  color: var(--black-30);
-  background-color: var(--basic-gray);
+  color: var(--color-black-30);
+  background-color: var(--color-gray);
 }
 
 .button_green {
-  background-color: var(--green-light);
+  background-color: var(--color-caribbean-green);
 }
 
 .button_green:hover,
 .button_green:focus-visible {
-  background-color: var(--green);
+  background-color: var(--color-jade);
 }
 
 .button_green:active {
-  background-color: var(--green-dark);
+  background-color: var(--color-jade-dark);
 }
 
 .button_yellow {
-  background-color: var(--yellow-light);
+  background-color: var(--color-ronchi);
 }
 
 .button_yellow:hover,
 .button_yellow:focus-visible {
-  background-color: var(--yellow);
+  background-color: var(--color-tulip-tree);
 }
 
 .button_yellow:active {
-  background-color: var(--yellow-dark);
+  background-color: var(--color-fire-bush);
 }
 
 /* Themes */
@@ -96,7 +96,7 @@ a.button:not([href]) {
 .button_outlined {
   transition: border-color var(--time-microinteraction);
 
-  border: 3px solid var(--gray-lightDB);
+  border: 3px solid var(--color-alto);
 }
 
 .button_outlined,
@@ -111,16 +111,16 @@ a.button:not([href]) {
 }
 
 .button_outlined.button_gray {
-  border-color: var(--basic-gray);
+  border-color: var(--color-gray);
 }
 
 .button_outlined.button_gray:hover,
 .button_outlined.button_gray:focus-visible {
-  border-color: var(--gray-lightDF);
+  border-color: var(--color-alto-dark);
 }
 
 .button_outlined.button_gray:active {
-  border-color: var(--basic-gray);
+  border-color: var(--color-gray);
 }
 
 /* Context Modifiers */

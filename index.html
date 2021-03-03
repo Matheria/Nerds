@@ -48,7 +48,7 @@
         <h2 class="visually-hidden">Слайдер</h2>
         <div class="slider__inner container">
           <ul class="slider__list">
-            <li class="slider__item slider__item_visible">
+            <li class="slider__item slider__item-first slider__item_visible">
               <img class="slider__item-img" src="img/slide-1.png" width="760" height="431" alt="Дизайн мобильных приложений">
               <div class="slider__item-inner">
                 <p class="slider__item-title">Долго, дорого,<br>скрупулезно.</p>
@@ -56,7 +56,7 @@
                 <a class="button button_slider slider__item-button" href="#">Узнать больше</a>
               </div>
             </li>
-            <li class="slider__item">
+            <li class="slider__item slider__item-second">
               <img class="slider__item-img" src="img/slide-2.png" width="760" height="431" alt="Изображение моноблоков">
               <div class="slider__item-inner">
                 <p class="slider__item-title">Любим математику<br> как никто другой</p>
@@ -64,7 +64,7 @@
                 <a class="button button_slider slider__item-button" href="#">Узнать больше</a>
               </div>
             </li>
-            <li class="slider__item">
+            <li class="slider__item slider__item-third">
               <img class="slider__item-img" src="img/slide-3.png" width="760" height="431" alt="Изображение планшета">
               <div class="slider__item-inner">
                 <p class="slider__item-title">Только ночь,<br> только хардкор</p>
@@ -75,9 +75,9 @@
           </ul>
 
           <div class="slider__controls">
-            <button class="button-switch button-switch_current" type="button" aria-label="Первый слайд"></button>
-            <button class="button-switch" type="button" aria-label="Второй слайд"></button>
-            <button class="button-switch" type="button" aria-label="Третий слайд"></button>
+            <button class="button-switch button-switch_first button-switch_current" type="button" aria-label="Первый слайд"></button>
+            <button class="button-switch button-switch_second" type="button" aria-label="Второй слайд"></button>
+            <button class="button-switch button-switch_third" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
       </section>
@@ -228,12 +228,12 @@
         <form class="write-us-modal__form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="write-us-modal__form-field">
             <label class="write-us-modal__form-label">Ваше имя:
-              <input class="input-text write-us-modal__form-control" type="text" name="fullname" placeholder="Имя Фамилия">
+              <input class="input-text write-us-modal__name write-us-modal__form-control" type="text" name="fullname" placeholder="Имя Фамилия" required>
             </label>
           </div>
           <div class="write-us-modal__form-field">
             <label class="write-us-modal__form-label">Ваш email:
-              <input class="input-text write-us-modal__form-control" type="email" name="email" placeholder="email@example.com">
+              <input class="input-text write-us-modal__email write-us-modal__form-control" type="email" name="email" placeholder="email@example.com" required>
             </label>
           </div>
           <div class="write-us-modal__form-field write-us-modal__form-field_message-text">
@@ -251,5 +251,6 @@
 
     <script src="js/modal.js" type="module"></script>
     <script src="js/slider.js" type="module"></script>
+
   </body>
 </html>

@@ -9,3 +9,10 @@
 
     list-style: none;
 }
+
+.catalog-list-item:hover,
+.catalog-list-item:focus {
+  box-shadow: 0 6px 15px var(--color-black-25);
+
+  border-color: transparent;
+}

@@ -16,7 +16,7 @@
 
 .page-main__separator {
     border: none;
-    border-top: 2px solid var(--basic-gray);
+    border-top: 2px solid var(--color-gray);
 
     margin: 0 0 39px;
 }
@@ -28,7 +28,7 @@
 .page-main__inner-page-header {
     /* padding: 25px 48px; */
 
-    background-color: var(--basic-gray);
+    background-color: var(--color-gray);
 }
 
 .page-main__inner-page-title {
@@ -38,7 +38,7 @@
 
     text-align: center;
 
-    color: var(--basic-black);
+    color: var(--color-black);
 
     font-size: 55px;
     line-height: 55px;
@@ -53,6 +53,6 @@
     align-content: start;
 
     width: 1160px;
-    margin: 55px auto;
-    padding-bottom: 68px;
+    margin: 55px auto 60px;
+   /* padding-bottom: 68px; */
 }

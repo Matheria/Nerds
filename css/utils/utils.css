@@ -45,7 +45,7 @@
   content: "";
   transform: translateY(-50%);
 
-  background-color: var(--red-light);
+  background-color: var(--color-carnation);
 }
 
 .cms-content h4 {

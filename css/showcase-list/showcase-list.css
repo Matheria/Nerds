@@ -1,5 +1,5 @@
 .showcase-list {
-  --border: 2px solid var(--basic-gray);
+  --border: 2px solid var(--color-gray);
 
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +28,7 @@
   content: "";
   transform: translateY(-50%);
 
-  background-color: var(--basic-gray);
+  background-color: var(--color-gray);
 }
 
 .showcase__item:nth-child(4n)::after {

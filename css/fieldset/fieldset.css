@@ -23,7 +23,7 @@
 
     text-transform: uppercase;
 
-    color: var(--basic-black);
+    color: var(--color-black);
 
     font-size: 18px;
     line-height: 30px;
@@ -33,7 +33,7 @@
 .fieldset__list {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
 
     margin: 0;
     padding: 0;

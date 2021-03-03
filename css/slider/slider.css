@@ -1,7 +1,7 @@
 .slider {
   min-height: 431px;
 
-  background-color: var(--basic-gray);
+  background-color: var(--color-gray);
 }
 
 .slider__inner {
@@ -46,7 +46,7 @@
 .slider__item-title {
   margin: 0 0 25px 0;
 
-  color: var(--basic-black);
+  color: var(--color-black);
 
   font-size: 55px;
   line-height: 55px;

@@ -13,7 +13,7 @@
     outline: none;
     border: none;
     border-radius: 50%;
-    background-color: var(--basic-white);
+    background-color: var(--color-white);
 }
 
 .button-switch:focus-visible {
@@ -35,7 +35,7 @@
     content: "";
     transition: opacity var(--time-microinteraction), border-color var(--time-microinteraction);
 
-    border: 2px solid var(--silver);
+    border: 2px solid var(--color-silver);
     border-radius: 50%;
 }
 
@@ -45,7 +45,7 @@
 
 .button-switch:hover::before,
 .button-switch:focus-visible::before {
-    border-color: var(--gray-dark4D);
+    border-color: var(--color-tundora-dark);
 }
 
 .button-switch:active::before {

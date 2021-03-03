@@ -1,4 +1,4 @@
-.template-card {
+.template {
     position: relative;
 
     display: flex;
@@ -11,7 +11,7 @@
     height: 618px;
 }
 
-.template-card::before {
+.template::before {
     display: block;
 
     content: "";
@@ -27,32 +27,25 @@
     background-position: 0 0;
 }
 
-.template-card:hover::before {
+.template:hover::before {
     opacity: 1;
 }
 
-.template-card__title {
+.template-title {
     margin: 26px 0 12px;
     padding: 0;
 }
 
-.template-card__img-wrapper {
+.template-image {
     width: 358px;
     height: 578px;
 }
 
-.template-card__img {
-  border: 1px solid var(--color-black-10);
-  border-top-width: 0;
-
-  box-sizing: border-box;
-}
-
-.template-card__link {
+.template-link {
     text-decoration: none;
 }
 
-.template-card__background {
+.template-background {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -66,21 +59,20 @@
     min-height: 231px;
 
     text-align: center;
-    transform: translateY(100%);
-    transition: transform var(--time-microinteraction);
 
-    opacity: 0;
     background-color: var(--color-gray);
 }
 
-.template-card:hover .template-card__background,
-.template-card__background:focus-within {
-    transform: translateY(0%);
+.template-background {
+    opacity: 0;
+}
 
+.template:hover .template-background,
+.template-background:focus-within {
     opacity: 1;
 }
 
-.template-card__desc {
+.template-desc {
     margin-bottom: 32px;
 
     color: var(--color-dove-gray);
@@ -88,29 +80,20 @@
     line-height: 18px;
 }
 
-.template-card__link {
+.template-link {
     text-transform: uppercase;
 
     color: var(--color-black);
-
-    outline: none;
 
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
 }
 
-.template-card__link:hover,
-.template-card__link:focus-visible {
+.template-link:hover {
     color: var(--color-carnation);
 }
 
-.template-card__link:focus-visible {
-  outline: var(--color-cornflower-blue-50) 4px solid;
-  outline-offset: 3px;
+.template-link:focus {
+    color: var(--color-black-30);
 }
-
-.template-card__link:active {
-  color: var(--color-black-30);
-}
-

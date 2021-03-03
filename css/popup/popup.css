@@ -7,7 +7,7 @@
     height: 308px;
     padding: 50px;
 
-    background-color: var(--basic-white);
+    background-color: var(--color-white);
   }
 
   .popup__title {
@@ -17,7 +17,7 @@
 
     text-transform: uppercase;
 
-    color: var(--black);
+    color: var(--color-steel-gray);
 
     font-size: 18px;
     line-height: 30px;
@@ -34,7 +34,7 @@
   .popup__text {
     margin: 0;
 
-    color: var(--gray-dark66);
+    color: var(--color-dove-gray);
 
     line-height: 18px;
   }
