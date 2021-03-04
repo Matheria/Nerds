@@ -39,7 +39,7 @@
     color: var(--color-tundora);
 }
 
-.input-text:invalid {
+.input-text:not(:placeholder-shown):invalid {
     color: var(--color-cinnabar);
     border-color: var(--color-cinnabar);
 }

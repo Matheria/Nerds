@@ -1,6 +1,7 @@
 const writeUsLink = document.querySelector(".popup__button");
 const writeUsPopup = document.querySelector(".modal");
 const writeUsClose = writeUsPopup.querySelector(".modal__close-button");
+const writeUsModalButton = writeUsPopup.querySelector(".write-us-modal__button");
 
 const writeUsForm = writeUsPopup.querySelector(".write-us-modal__form");
 const writeUsName = writeUsPopup.querySelector(".write-us-modal__name");
@@ -45,6 +46,16 @@ writeUsForm.addEventListener("submit", function (evt) {
     if (isStorageSupport) {
       localStorage.setItem("login", writeUsName.value);
     }
+  }
+});
+
+writeUsModalButton.addEventListener("click", function (evt) {
+  if (!writeUsForm.checkValidity()) {
+    writeUsPopup.classList.add("modal_error");
+
+    setTimeout(() => {
+      writeUsPopup.classList.remove("modal_error");
+    }, 600);
   }
 });
 
