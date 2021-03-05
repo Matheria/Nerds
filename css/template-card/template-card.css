@@ -27,7 +27,8 @@
     background-position: 0 0;
 }
 
-.template-card:hover::before {
+.template-card:hover::before,
+.template-card:focus-within::before {
     opacity: 1;
 }
 
@@ -74,10 +75,14 @@
 }
 
 .template-card:hover .template-card__background,
-.template-card__background:focus-within {
+.template-card:focus-within .template-card__background {
     transform: translateY(0%);
 
     opacity: 1;
+}
+
+.template-card:focus-within .template-card__background {
+    transition: none;
 }
 
 .template-card__desc {
