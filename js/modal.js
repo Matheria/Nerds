@@ -1,70 +1,69 @@
-const writeUsLink = document.querySelector(".popup__button");
-const writeUsPopup = document.querySelector(".modal");
-const writeUsClose = writeUsPopup.querySelector(".modal__close-button");
-const writeUsModalButton = writeUsPopup.querySelector(".write-us-modal__button");
-
-const writeUsForm = writeUsPopup.querySelector(".write-us-modal__form");
-const writeUsName = writeUsPopup.querySelector(".write-us-modal__name");
-const writeUsEmail = writeUsPopup.querySelector(".write-us-modal__email");
-const writeUsLetter = writeUsPopup.querySelector(".input-text_message-text");
-
-let isStorageSupport = true;
-let storage = "";
-
 try {
-  storage = localStorage.getItem("login");
-} catch (err) {
-  isStorageSupport = false;
-}
+  const MODAL_SHAKE_ANIMATION_DURATION = 600; // /css/modal/modal.css:27
+  const ESC_KEY_CODE = 27;
 
-writeUsLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  writeUsPopup.classList.add("modal_visible");
+  const page = document.documentElement;
+  const popupButton = page.querySelector('.popup__button');
+  const modal = page.querySelector('.modal');
+  const modalCloseButton = modal.querySelector('.modal__close-button');
+  const writeUsModalForm = modal.querySelector('.write-us-modal__form');
+  const writeUsModalButton = modal.querySelector('.write-us-modal__button');
 
-  if (storage) {
-    writeUsName.value = storage;
-    writeUsEmail.focus();
-  } else {
-  writeUsName.focus();
+  function showModal() {
+    page.classList.add('page_modal-visible');
+    modal.classList.add('modal_visible');
+  
+    const firstFormElement = writeUsModalForm.elements[0];
+  
+    firstFormElement.focus();
+
+    window.addEventListener('keydown', handleWindowKeyDown);
   }
-});
+  
+  function hideModal() {
+    page.classList.remove('page_modal-visible');
+    modal.classList.remove('modal_visible');
 
-writeUsClose.addEventListener("click", function (evt) {
-  if (writeUsPopup.classList.contains("modal_visible")) {
-    evt.preventDefault();
-    writeUsPopup.classList.remove("modal_visible");
-    writeUsPopup.classList.remove("modal_error");
+    window.removeEventListener('keydown', handleWindowKeyDown);
   }
-});
-
-writeUsForm.addEventListener("submit", function (evt) {
-  if (!writeUsName.value || !writeUsEmail.value || !writeUsLetter.value) {
-    evt.preventDefault();
-
-    writeUsPopup.classList.add("modal_error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("login", writeUsName.value);
-    }
-  }
-});
-
-writeUsModalButton.addEventListener("click", function (evt) {
-  if (!writeUsForm.checkValidity()) {
-    writeUsPopup.classList.add("modal_error");
-
+  
+  function shakeModal() {
+    modal.classList.add('modal_error');
+  
     setTimeout(() => {
-      writeUsPopup.classList.remove("modal_error");
-    }, 600);
+      modal.classList.remove('modal_error');
+    }, MODAL_SHAKE_ANIMATION_DURATION);
   }
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (writeUsPopup.classList.contains("modal_visible")) {
+  
+  function handlePopupButtonClick() {
+    showModal();
+  }
+  
+  function handleModalCloseButtonClick() {
+    hideModal();
+  }
+  
+  function handleWriteUsModalButtonClick(evt) {
+    if (!writeUsModalForm.checkValidity()) {
       evt.preventDefault();
-      writeUsPopup.classList.remove("modal_visible");
-      writeUsPopup.classList.remove("modal_error");
+  
+      shakeModal();
     }
   }
-});
+
+  function handleWindowKeyDown(evt) {
+    if (evt.keyCode !== ESC_KEY_CODE) {
+      return;
+    }
+
+    evt.preventDefault();
+
+    hideModal();
+  }
+  
+  popupButton.addEventListener('click', handlePopupButtonClick);
+  modalCloseButton.addEventListener('click', handleModalCloseButtonClick);
+  writeUsModalButton.addEventListener('click', handleWriteUsModalButtonClick);
+} catch(e) {
+  console.warn(`Инициализация модуля Modal прошла неудачно: ${e}`)
+}
