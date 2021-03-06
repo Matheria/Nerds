@@ -116,10 +116,16 @@ try {
 
     function handleWriteUsModalButtonClick(evt) {
       if (!writeUsModalForm.checkValidity()) {
-        evt.preventDefault();
-
         shakeModal();
       }
+    }
+
+    function handlePageClick(evt) {
+      if (evt.target.closest('.modal')) {
+        return;
+      }
+
+      hideModal();
     }
 
     function handleWindowKeyDown(evt) {
@@ -132,6 +138,7 @@ try {
       hideModal();
     }
 
+    page.addEventListener('click', handlePageClick, true)
     popupButton.addEventListener('click', handlePopupButtonClick);
     modalCloseButton.addEventListener('click', handleModalCloseButtonClick);
     writeUsModalButton.addEventListener('click', handleWriteUsModalButtonClick);
