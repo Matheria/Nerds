@@ -429,6 +429,15 @@ a.button-round:not([href]) {
   pointer-events: auto
 }
 
+.contacts__map {
+  width: 100%;
+  height: 416px;
+
+  object-fit: cover;
+
+  border: none;
+}
+
 .contacts__popup {
   position: absolute;
   bottom: 54px;
@@ -494,7 +503,7 @@ a.button-round:not([href]) {
 }
 
 .input-checkbox-control:checked+.input-checkbox-label-wrapper .input-checkbox-button {
-  background-image: url(/img/checkbox-on.svg);
+  background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat
 }
 
@@ -519,7 +528,7 @@ a.button-round:not([href]) {
   height: 23px;
   opacity: .4;
   outline: 0;
-  background-image: url(/img/checkbox-off.svg);
+  background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat
 }
 
@@ -538,7 +547,7 @@ a.button-round:not([href]) {
   width: 100%;
   height: 2px;
   background-color: var(--color-iron);
-  background-image: linear-gradient(to right, transparent 30%, var(--color-caribbean-green) 30%, var(--color-caribbean-green) 100%, transparent 100%)
+  background-image: linear-gradient(to left, transparent 30%, var(--color-caribbean-green) 30%, var(--color-caribbean-green) 100%, transparent 100%)
 }
 
 .input-double-range__button {
@@ -568,11 +577,11 @@ a.button-round:not([href]) {
 }
 
 .input-double-range__button_min {
-  left: 30%
+  left: 0;
 }
 
 .input-double-range__button_max {
-  left: 100%
+  left: 70%;
 }
 
 .input-double-range__control {
@@ -593,8 +602,14 @@ a.button-round:not([href]) {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
 }
 
 .input-double-range__controls-wrapper {
@@ -812,49 +827,43 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .page-header__logo:hover,
 .page-header__logo:focus-visible {
-  opacity: .7
+  opacity: .7;
 }
 
 .page-header__logo[href]:active {
-  opacity: .3
+  opacity: .3;
 }
 
 .page-header__logo:focus-visible {
-  box-shadow: 0 0 0 4px var(--color-cornflower-blue-50)
+  box-shadow: 0 0 0 4px var(--color-cornflower-blue-50);
 }
 
 .page-header__logo-img {
   display: inline-flex;
-  vertical-align: top
+  vertical-align: top;
 }
 
 .page-main_index {
-  padding-bottom: 80px
+  padding-bottom: 80px;
 }
 
 .page-main__slider {
-  margin-bottom: 80px
+  margin-bottom: 80px;
 }
 
 .page-main__about-and-results {
   display: grid;
   grid-template-columns: 660px 360px;
   gap: 140px;
-  margin-bottom: 73px
-}
-
-.page-main__separator {
-  border: 0;
-  border-top: 2px solid var(--color-gray);
-  margin: 0 0 39px
+  margin-bottom: 73px;
 }
 
 .page-main__about {
-  margin-top: 34px
+  margin-top: 34px;
 }
 
 .page-main__inner-page-header {
-  background-color: var(--color-gray)
+  background-color: var(--color-gray);
 }
 
 .page-main__inner-page-title {
@@ -919,6 +928,13 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 18px
 }
 
+.popup__phone {
+  text-decoration: none;
+
+  color: var(--color-dove-gray);
+  line-height: 18px
+}
+
 .popup__button {
   margin-top: auto
 }
@@ -968,6 +984,10 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400
 }
 
+.service-card {
+  margin: 0 0 80px;
+}
+
 .service-card__img {
   display: block;
   margin-bottom: 25px
@@ -988,7 +1008,15 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .services {
-  margin-bottom: 80px
+  margin: 0 0 40px;
+}
+
+.services::after {
+  content: "";
+  display: block;
+  background-color: var(--color-gray);
+  width: 1160px;
+  height: 2px;
 }
 
 .services__list {
@@ -1293,7 +1321,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 40px;
   transition: opacity 500ms;
   opacity: .12;
-  background-image: url(/img/template-header.svg);
+  background-image: url(../img/template-header.svg);
   background-repeat: no-repeat;
   background-position: 0 0
 }
@@ -1379,7 +1407,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 40px;
   transition: opacity 500ms;
   opacity: .12;
-  background-image: url(/img/template-header.svg);
+  background-image: url(../img/template-header.svg);
   background-repeat: no-repeat;
   background-position: 0 0
 }
@@ -1586,4 +1614,3 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 1160px;
   margin: 55px auto 60px
 }
-

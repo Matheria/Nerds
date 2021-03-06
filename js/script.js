@@ -80,7 +80,9 @@ try {
     const writeUsModalForm = modal.querySelector('.write-us-modal__form');
     const writeUsModalButton = modal.querySelector('.write-us-modal__button');
 
-    function showModal() {
+    function showModal(evt) {
+      evt.preventDefault();
+
       page.classList.add('page_modal-visible');
       modal.classList.add('modal_visible');
 
