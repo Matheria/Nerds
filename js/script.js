@@ -80,9 +80,7 @@ try {
     const writeUsModalForm = modal.querySelector('.write-us-modal__form');
     const writeUsModalButton = modal.querySelector('.write-us-modal__button');
 
-    function showModal(evt) {
-      evt.preventDefault();
-
+    function showModal() {
       page.classList.add('page_modal-visible');
       modal.classList.add('modal_visible');
 
@@ -108,7 +106,8 @@ try {
       }, MODAL_SHAKE_ANIMATION_DURATION);
     }
 
-    function handlePopupButtonClick() {
+    function handlePopupButtonClick(evt) {
+      evt.preventDefault();
       showModal();
     }
 
